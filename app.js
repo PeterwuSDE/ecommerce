@@ -13,7 +13,7 @@ const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const braintreeRoutes = require("./routes/braintree");
 const orderRoutes = require("./routes/order");
-const MongoClient = require('mongodb').MongoClient;
+/*const MongoClient = require('mongodb').MongoClient;
 const uri = process.env.DATABASE;
 const client = new MongoClient(uri, { useNewUrlParser: true, useCreateIndex: true});
 
@@ -21,11 +21,28 @@ client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   client.close();
-});
+});*/
 
 
 // app
 const app = express();
+
+// import mongoose
+//const mongoose = require('mongoose');
+// load env variables
+const dotenv = require('dotenv');
+dotenv.config()
+ 
+//db connection
+mongoose.connect(
+  process.env.DATABASE,
+  {useNewUrlParser: true}
+)
+.then(() => console.log('DB Connected'))
+ 
+mongoose.connection.on('error', err => {
+  console.log(`DB connection error: ${err.message}`)
+});
 
 // db
 /*mongoose
