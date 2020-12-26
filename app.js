@@ -14,7 +14,7 @@ const productRoutes = require("./routes/product");
 const braintreeRoutes = require("./routes/braintree");
 const orderRoutes = require("./routes/order");
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Peterwu97:Wuhaodong9769@cluster0.phbyj.mongodb.net/Ecommerce?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Peterwu97:Wuhaodong9769@cluster0.phbyj.mongodb.net/Ecommerce%0A?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
 client.connect(err => {
