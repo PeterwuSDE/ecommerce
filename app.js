@@ -15,7 +15,7 @@ const braintreeRoutes = require("./routes/braintree");
 const orderRoutes = require("./routes/order");
 const MongoClient = require('mongodb').MongoClient;
 const uri = process.env.DATABASE;
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useNewUrlParser: true, useCreateIndex: true});
 
 client.connect(err => {
   const collection = client.db("test").collection("devices");
