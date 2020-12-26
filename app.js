@@ -28,12 +28,12 @@ client.connect(err => {
 const app = express();
 
 // db
-mongoose
+/*mongoose
     .connect(process.env.DATABASE, {
         useNewUrlParser: true,
         useCreateIndex: true
     })
-    .then(() => console.log("DB Connected"));
+    .then(() => console.log("DB Connected"));*/
 
     
 
