@@ -13,7 +13,7 @@ const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const braintreeRoutes = require("./routes/braintree");
 const orderRoutes = require("./routes/order");
-/*const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://Peterwu97:Wuhaodong9769@cluster0.phbyj.mongodb.net/Ecommerce%0A?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
@@ -21,19 +21,19 @@ client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
   client.close();
-});*/
+});
 
 
 // app
 const app = express();
 
 // db
-mongoose
+/*mongoose
     .connect(process.env.DATABASE, {
         useNewUrlParser: true,
         useCreateIndex: true
     })
-    .then(() => console.log("DB Connected"));
+    .then(() => console.log("DB Connected"));*/
 
     
 
